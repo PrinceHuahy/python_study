@@ -1,32 +1,63 @@
-# python_study
 ## if you are interesting markdown grammar just click [here](#markdown)
-based on https://mofanpy.com/tutorials/python-basic/interactive-python/
-下载python:
-windows：
-https://www.python.org/ftp/python/3.10.5/python-3.10.5-amd64.exe
-ubuntu系统自带，要升级只需要终端输入: sudo apt-get update && sudo apt-get upgrade
+## 国内用户请点击[这里](#chinese)修改ubuntu源提高下载速度。对应的还有conda源与pip源。
 
-下载Pycharm：
-推荐下载Toolbox然后从Toolbox安装pycharm，其中 pycharm community为免费版，pycharm professional为专业版。
-Toolbox：
-    windows：
-	https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.exe
-    ubuntu：需要先在终端安装 FUSE : sudo apt install fuse
-	https://download-cdn.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz
+---
 
+Personal python study. share everything I meet. based on:[https://mofanpy.com/tutorials/python-basic/interactive-python/](https://mofanpy.com/tutorials/python-basic/interactive-python/)  
+# learning environment build
+## ubuntu(22.04)
+- 1\.install toolbox. [click here](https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz)
+- 2\.open terminal
+  ```ubuntu
+  $ sudo apt update&&sudo apt upgrade
+  $ sudo apt install fuse
+  $ cd /your/toolbox_download/path
+  $ tar -zxvf jetbrains-toolbox-1.24.12080.tar.gz
+  $ cd jetbrains-toolbox-1.24.12080/
+  $ ./jetbrains-toolbox
+  ```
+- 3\.open toolbox and install Pycharm Community
 
-单行代码的每一行均为 -----隔开。 多行的内容只需要复制####里面的内容即可。
-pip相关：
------------------------------------------------------------------------------------------------------------------------
-pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
------------------------------------------------------------------------------------------------------------------------
-python -m pip install --upgrade pip
------------------------------------------------------------------------------------------------------------------------
+### optional (Recommend)
+use conda instead build-in python  
+- 1\. install conda. [click here](https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh)  
+- 2\. open terminal
+  ```ubuntu
+  $ cd /your/miniconda_download/path
+  $ bash Miniconda3-py39_4.12.0-Linux-x86_64.sh
+  ...
+  
+  # All requested packages already installed.
 
-ubuntu(22.04)相关：
-编辑 /etc/apt/sources.list
+  installation finished.  
+  Do you wish the installer to initialize Miniconda3  
+  by running conda init? [yes|no]
+  $ yes (recommend)
+  ```
+- 2.5\. close all terminal and restart a terminal. it should looks like this:  
+`(base) user@computer:~$`,enter the following code:
+  ```ubuntu
+  $ conda create -n py310 python==3.10.4
+  $ conda activate py310
+  ```
+    py310 is what virtual python environment name  
+    3.10.4 is your python version  
+- 3\. open Pycharm and create a new project  
+for more info about how to use conda in pycharm you should [chick here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html)  
 
-##################################复制井号里面的内容###################################
+enjoying your python learning.   
+:D
+
+---
+## Change source (optional)
+<span id="chinese"></span>
+ubuntu(22.04)源修改：  
+编辑 /etc/apt/sources.list 终端输入：  
+`suda nano /etc/apt/sources.list`  
+通过上下左右移动光标到第一行第一列，按住`ctrl + k`不放会删除所有行。  
+复制下面的代码以后使用 `ctrl + shift + v`可以粘贴进命令行。  
+粘贴完成以后使用`ctrl + x`下面会出现提示是否保存，`y`为保存，然后问你写入的文件名，保持不动直接回车即可。  
+```ubuntu
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
@@ -36,19 +67,14 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
-####################################################################################
-
-conda相关：
-首先激活对应环境，激活之后想用pip则在对应环境下重复执行pip相关的两行代码。
------------------------------------------------------------------------------------------------------------------------
-conda config --set show_channel_urls yes
------------------------------------------------------------------------------------------------------------------------
-然后编辑.condarc文件
-windows在 用户名/.condarc
-ubuntu在 ~/.condarc
-
+```
+### conda相关：  
+打开终端输入:  
+`conda config --set show_channel_urls yes`  
+然后编辑.condarc文件:  
+`sudo nano ./condarc`  
 将其全部删除，然后替换为
-##################################复制井号里面的内容###################################
+```ubuntu
 channels:
   - defaults
 show_channel_urls: true
@@ -64,7 +90,12 @@ custom_channels:
   pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
-####################################################################################
+```
+保存以后可以输入 `conda clean -i` 清除缓存。在激活对应环境以后在终端输入下面两行代码则可以更改当前虚拟环境的pip源。    
+如果你更换了新的虚拟环境需要在激活对应的虚拟环境以后重新输入一次下面两行代码。  
+所有的第三方库都需要在对应激活的虚拟环境下使用pip install 安装，不是很推荐conda安装。  
+`pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`  
+`python -m pip install --upgrade pip`
 
 
 
