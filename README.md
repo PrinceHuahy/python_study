@@ -1,5 +1,5 @@
 ## if you are interesting markdown grammar just click [here](#markdown)
-## 国内用户请点击[这里](#chinese)修改ubuntu源提高下载速度。对应的还有conda源与pip源。
+## 国内用户请点击[这里](#chinese)修改源提高下载速度。
 
 ---
 
