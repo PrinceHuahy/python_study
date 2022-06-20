@@ -1,0 +1,32 @@
+linux command
+cd Documents/ # go into Documents
+cd ../ # back to upper floder, 
+cd ../../ # back twice
+cd /home/chen/ # go to /home/chen/
+ls # show file name
+ls -l # ls show more info
+ls -a # ls -all .show all file like .hildden
+touch file1 file2 file3# create file1,2,3
+cp option[-i] file1 file1copy # -i can have a interview
+cp -R folder1/ folder2/ # copy all folder1 to folder2
+cp file1 file2 folder2/ copy file1,2 into folder2
+mv begindir lastdir # like ctrl + x in windows
+mkdir folder3 # create folder3
+rm option[-i] file1 # delete file1
+rm -r folder3/  # delete folder3's all file
+
+nano command
+ctrl + x #save
+
+cat command
+cat t.py # show anything in t.py on your terminal
+cat t.py > t1.py # copy anything in t.py into t1.py
+cat t.py t1.py > t2.py # copy anything in t.py t1.py into t1.py
+cat t3.py >> t2.py # add anything in t3.py into t2.py last line
+
+file permission
+drwx # d: floder r:read w: write x: excution
+
+chmod u+r t1.py # change permission user to read t1.py
+chmod u-r t1.py # not allowed user to read t1.py
+
