@@ -131,22 +131,22 @@ python prime function
 # print(l)
 
 '''generator'''
-items = []
-for item in range(5):
-    if item % 2 == 0:
-        items.append(item)
-
-for i in items:
-    print(i)
-
-
-def need_return():
-    for item in range(5):
-        if item % 2 == 0:
-            print(f'我要扔出一个{item}了')
-            yield item
-            print('我又回到里面了')
-
-
-for i in need_return():
-    print(i)
+# items = []
+# for item in range(5):
+#     if item % 2 == 0:
+#         items.append(item)
+#
+# for i in items:
+#     print(i)
+#
+#
+# def need_return():
+#     for item in range(5):
+#         if item % 2 == 0:
+#             print(f'我要扔出一个{item}了')
+#             yield item
+#             print('我又回到里面了')
+#
+#
+# for i in need_return():
+#     print(i)
