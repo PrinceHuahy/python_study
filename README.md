@@ -1,4 +1,4 @@
-## if you are interesting markdown grammar just click [here](#markdown)
+## if you are interested in markdown grammar just click [here](#markdown)
 ## 国内用户请点击[这里](#chinese)修改源提高下载速度。
 
 ---
