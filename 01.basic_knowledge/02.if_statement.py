@@ -7,15 +7,15 @@
 """if statement"""
 
 '''if'''
-# if True:
-#     print('It\'s True')
-#
-# if False:
-#     print('It\'s False')
-# if not False:
-#     print('I am not False')
-# # didn't see It's False? Because it's false, if statement will not run script
-# # that after False.
+if True:
+    print('It\'s True')
+
+if False:
+    print('It\'s False')
+if not False:
+    print('I am not False')
+# didn't see It's False? Because it's false, if statement will not run script
+# that after False.
 
 '''if else'''
 a, b = 3, 4
