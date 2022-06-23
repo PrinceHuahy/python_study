@@ -3,7 +3,8 @@
 
 ---
 
-Personal python study. share everything I meet. based on:[https://mofanpy.com/tutorials/python-basic/interactive-python/](https://mofanpy.com/tutorials/python-basic/interactive-python/)  
+Personal python study and share everything I meet.   
+based on:[https://www.w3schools.com/python/default.asp](https://www.w3schools.com/python/default.asp)  
 # learning environment build
 ## ubuntu(22.04)
 - 1\.install toolbox. [click here](https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz)
