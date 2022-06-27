@@ -71,9 +71,13 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted 
 ```
 ### conda相关：  
 打开终端输入:  
-`conda config --set show_channel_urls yes`  
-然后编辑.condarc文件:  
-`sudo nano ./condarc`  
+```ubuntu
+conda config --set show_channel_urls yes
+```  
+编辑.condarc文件:  
+```ubuntu
+sudo nano ./condarc
+```
 将其全部删除，然后替换为
 ```ubuntu
 channels:
