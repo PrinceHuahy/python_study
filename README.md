@@ -10,54 +10,54 @@ based on:[https://www.w3schools.com/python/default.asp](https://www.w3schools.co
 - 1\.install toolbox. [click here](https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz)
 - 2\.open terminal
   ```ubuntu
-  $ sudo apt update&&sudo apt upgrade
-  $ sudo apt install fuse
-  $ cd /your/toolbox_download/path
-  $ tar -zxvf jetbrains-toolbox-1.24.12080.tar.gz
-  $ cd jetbrains-toolbox-1.24.12080/
-  $ ./jetbrains-toolbox
+    sudo apt update&&sudo apt upgrade
   ```
-- 3\.open toolbox and install Pycharm Community
+  ```ubuntu
+    sudo apt install fuse
+  ```
+  ```ubuntu
+    cd /your/toolbox_download/path
+  ```
+  ```ubuntu
+    tar -zxvf jetbrains-toolbox-1.24.12080.tar.gz
+  ```
+  ```ubuntu
+    cd jetbrains-toolbox-1.24.12080/
+  ```
+  ```ubuntu
+    ./jetbrains-toolbox
+  ```
+- 3\.open toolbox at top-right corner and install Pycharm Community
 
 ### optional (Recommend)
 use conda instead build-in python  
 - 1\. install conda. [click here](https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh)  
-- 2\. open terminal
-  ```ubuntu
-  $ cd /your/miniconda_download/path
-  $ bash Miniconda3-py39_4.12.0-Linux-x86_64.sh
-  ...
-  
-  # All requested packages already installed.
 
-  installation finished.  
-  Do you wish the installer to initialize Miniconda3  
-  by running conda init? [yes|no]
-  $ yes (recommend)
-  ```
-- 2.5\. close all terminal and restart a terminal. it should looks like this:  
-`(base) user@computer:~$`,enter the following code:
+- 2\. close all terminal and restart a terminal. enter the following code:
   ```ubuntu
-  $ conda create -n py310 python==3.10.4
-  $ conda activate py310
+    conda create -n py310 python==3.10.4
   ```
-    py310 is what virtual python environment name  
-    3.10.4 is your python version  
-- 3\. open Pycharm and create a new project  
-for more info about how to use conda in pycharm you should [chick here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html)  
+  ```ubuntu
+    conda activate py310
+  ```
+    &emsp;&emsp;<b>py310</b> is what virtual python environment name  
+    &emsp;&emsp;<b>3.10.4</b> is your python version  
+- 3\. open Pycharm and create a new project for more info about how to use conda in pycharm you should [chick here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html).  
 
 enjoying your python learning.   
 :D
 
 ---
-## Change source (optional)
+## 修改程序源 (显著提高国内下载速度)
 <span id="chinese"></span>
-ubuntu(22.04)源修改：  
-编辑 /etc/apt/sources.list 终端输入：  
-`suda nano /etc/apt/sources.list`  
-通过上下左右移动光标到第一行第一列，按住`ctrl + k`不放会删除所有行。  
-复制下面的代码以后使用 `ctrl + shift + v`可以粘贴进命令行。  
-粘贴完成以后使用`ctrl + x`下面会出现提示是否保存，`y`为保存，然后问你写入的文件名，保持不动直接回车即可。  
+&emsp;&emsp;ubuntu(22.04)源修改：  
+&emsp;&emsp;编辑 /etc/apt/sources.list 终端输入：
+```ubuntu
+    suda nano /etc/apt/sources.list
+```
+&emsp;&emsp;通过上下左右移动光标到第一行第一列，按住`ctrl + k`不放会删除所有行。  
+复制下面的代码以后使用 `ctrl + shift + v`可以粘贴进命令行。粘贴完成以后使用  
+`ctrl + x`下面会出现提示是否保存，`y`为保存，然后会询问你写入的文件名，保持不动直接回车即可。  
 ```ubuntu
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
@@ -70,15 +70,15 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted 
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 ```
 ### conda相关：  
-打开终端输入:  
+&emsp;&emsp;打开终端输入:  
 ```ubuntu
 conda config --set show_channel_urls yes
 ```  
-编辑.condarc文件:  
+&emsp;&emsp;编辑.condarc文件:  
 ```ubuntu
 sudo nano ./condarc
 ```
-将其全部删除，然后替换为
+&emsp;&emsp;将其全部删除，然后替换为
 ```ubuntu
 channels:
   - defaults
@@ -96,11 +96,20 @@ custom_channels:
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ```
-保存以后可以输入 `conda clean -i` 清除缓存。在激活对应环境以后在终端输入下面两行代码则可以更改当前虚拟环境的pip源。    
+&emsp;&emsp;保存以后可以输入下面的命令来清除conda缓存。
+```ubuntu
+    conda clean -i
+``` 
+&emsp;&emsp;当你激活对应环境以后在终端输入下面两行代码则可以更改当前虚拟环境的pip源。    
 如果你更换了新的虚拟环境需要在激活对应的虚拟环境以后重新输入一次下面两行代码。  
-所有的第三方库都需要在对应激活的虚拟环境下使用pip install 安装，不是很推荐conda安装。  
-`pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple`  
-`python -m pip install --upgrade pip`
+所有的第三方库都需要在对应激活的虚拟环境下使用pip install 安装，不是很推荐conda安装。
+```ubuntu
+    pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+``` 
+```ubuntu
+    python -m pip install --upgrade pip
+``` 
+
 
 
 
@@ -110,6 +119,7 @@ custom_channels:
 
 
 ---
+
 <span id="markdown"></span>
 # markdown basic grammar study  
 you can find all base-syntax in:
