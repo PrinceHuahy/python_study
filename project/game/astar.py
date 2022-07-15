@@ -334,10 +334,10 @@ def main():
     if show_animation:
         plt.plot(pathx, pathy, "-r")  # 红色直线 最终路径
         plt.plot(bx, by, 'b-')  # 蓝色直线 贝塞尔曲线
-        plt.plot(bx1, by1, 'b-')
-        plt.plot(bx2, by2, 'b-')
-        plt.plot(bx3, by3, 'b-')
-        plt.plot(bx4, by4, 'b-')
+        plt.plot(bx1, by1, 'y-')
+        plt.plot(bx2, by2, 'y-')
+        plt.plot(bx3, by3, 'y-')
+        plt.plot(bx4, by4, 'y-')
 
         plt.show()
         plt.pause(0.001)  # 动态显示
