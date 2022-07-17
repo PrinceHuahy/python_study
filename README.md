@@ -1,12 +1,14 @@
-## if you are interested in markdown grammar just click [here](#markdown)
 ## 国内用户请点击[这里](#chinese)修改源提高下载速度。
 
 ---
 
 Personal python study and share everything I meet.   
-based on:[https://www.w3schools.com/python/default.asp](https://www.w3schools.com/python/default.asp)  
+based on:[https://www.w3schools.com/python/default.asp](https://www.w3schools.com/python/default.asp)
+
 # learning environment build
+
 ## ubuntu(22.04)
+
 - 1\.install toolbox. [click here](https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.24.12080.tar.gz)
 - 2\.open terminal
   ```ubuntu
@@ -30,8 +32,10 @@ based on:[https://www.w3schools.com/python/default.asp](https://www.w3schools.co
 - 3\.open toolbox at top-right corner and install Pycharm Community
 
 ### optional (Recommend)
-use conda instead build-in python  
-- 1\. install conda. [click here](https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh)  
+
+use conda instead build-in python
+
+- 1\. install conda. [click here](https://repo.anaconda.com/miniconda/Miniconda3-py39_4.12.0-Linux-x86_64.sh)
 
 - 2\. close all terminal and restart a terminal. enter the following code:
   ```ubuntu
@@ -40,24 +44,30 @@ use conda instead build-in python
   ```ubuntu
     conda activate py310
   ```
-    &emsp;&emsp;<b>py310</b> is what virtual python environment name  
-    &emsp;&emsp;<b>3.10.4</b> is your python version  
-- 3\. open Pycharm and create a new project for more info about how to use conda in pycharm you should [chick here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html).  
+  &emsp;&emsp;<b>py310</b> is what virtual python environment name  
+  &emsp;&emsp;<b>3.10.4</b> is your python version
+- 3\. open Pycharm and create a new project for more info about how to use conda in pycharm you
+  should [chick here](https://www.jetbrains.com/help/pycharm/conda-support-creating-conda-virtual-environment.html).
 
 enjoying your python learning.   
 :D
 
 ---
+
 ## 修改程序源 (显著提高国内下载速度)
+
 <span id="chinese"></span>
 &emsp;&emsp;ubuntu(22.04)源修改：  
 &emsp;&emsp;编辑 /etc/apt/sources.list 终端输入：
+
 ```ubuntu
     suda nano /etc/apt/sources.list
 ```
+
 &emsp;&emsp;通过上下左右移动光标到第一行第一列，按住`ctrl + k`不放会删除所有行。  
 复制下面的代码以后使用 `ctrl + shift + v`可以粘贴进命令行。粘贴完成以后使用  
-`ctrl + x`下面会出现提示是否保存，`y`为保存，然后会询问你写入的文件名，保持不动直接回车即可。  
+`ctrl + x`下面会出现提示是否保存，`y`为保存，然后会询问你写入的文件名，保持不动直接回车即可。
+
 ```ubuntu
 # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
@@ -69,16 +79,23 @@ deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted
 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
 ```
-### conda相关：  
-&emsp;&emsp;打开终端输入:  
+
+### conda相关：
+
+&emsp;&emsp;打开终端输入:
+
 ```ubuntu
 conda config --set show_channel_urls yes
 ```  
-&emsp;&emsp;编辑.condarc文件:  
+
+&emsp;&emsp;编辑.condarc文件:
+
 ```ubuntu
 sudo nano ./condarc
 ```
+
 &emsp;&emsp;将其全部删除，然后替换为
+
 ```ubuntu
 channels:
   - defaults
@@ -96,129 +113,19 @@ custom_channels:
   pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
   simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud
 ```
+
 &emsp;&emsp;保存以后可以输入下面的命令来清除conda缓存。
+
 ```ubuntu
     conda clean -i
 ``` 
-&emsp;&emsp;当你激活对应环境以后在终端输入下面两行代码则可以更改当前虚拟环境的pip源。    
-如果你更换了新的虚拟环境需要在激活对应的虚拟环境以后重新输入一次下面两行代码。  
-所有的第三方库都需要在对应激活的虚拟环境下使用pip install 安装，不是很推荐conda安装。
+
+&emsp;&emsp;当你激活对应环境以后在终端输入下面两行代码则可以更改当前虚拟环境的pip源。如果你更换了新的虚拟环境需要在激活对应的虚拟环境以后重新输入一次下面两行代码。所有的第三方库都需要在对应激活的虚拟环境下使用pip install 安装，不是很推荐conda安装。
+
 ```ubuntu
     pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ``` 
+
 ```ubuntu
     python -m pip install --upgrade pip
 ``` 
-
-
-
-
-
-
-
-
-
----
-
-<span id="markdown"></span>
-# markdown basic grammar study  
-you can find all base-syntax in:
-[Basic-Syntax | Markdown](https://www.markdownguide.org/basic-syntax/)   
-`anything write in this block is original input`
-
----
-
-## title:
-write # at start like:  
-`# level 1 with`  
-`## level 2 with`   
-`### level 3 with`  
-`#### level 4 with`  
-`##### level 5 with`  
-`###### level 6 with` 
-# level 1 with  
-## level 2 with  
-### level 3 with  
-#### level 4 with  
-##### level 5 with  
-###### level 6 with  
-
----
-
-## Emphasis
-use * or _ at word both sides to *italic* word.eg:`*italic*`  
-use ** or __ at word both sides to **Blod** word.  `**Blod** `  
-use *** or ___ to ***italic and blod***.`***italic and blod***` 
-use asterisks to bold and italicize the middle of a word for emphasis.  
-eg:
-emph***as***is `emph***as***is`
-
----
-
-## Blockquotes
-To create a blockquotes,add a > in front of paragraph.  
-with multiple paragraph need add a > on the blank lines between the paragraphs.
-> Dorothy followed her through many of the beautiful rooms in her castle.
->
-> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.  
-
-`> Dorothy followed her through many of the beautiful rooms in her castle.`  
-`>`  
-`> The Witch bade her clean the pots and kettles and sweep the floor and keep the fire fed with wood.`  
-
----
-
-## Lists
-use numbers followed by periods  
-
-1. First item
-2. Second item
-3. Third item
-    1. Indented item
-    2. Indented item
-4. Fourth item  
-`1. First item`  
-`2. Second item`  
-### Unordered list  
-- First item
-- Third item
-- Second item  
-`- Second item`  
-### number start unordered list
-- 121\. test  
-`- 121\. test`
-
----
-
-## Code
-\`at code bothside to write code.it can show # > ~ _ * normally.like this\`  
-`at code bothside to write code.it can show # > ~ _ * normally.like this`  
-multiple line code use \``` at start and end   
-```python
-def add(a,b):
-    return a + b
-print(3,5)
-```
-
-## Web link
-`[show name](web link)`  
-you can find all base-syntax in:
-[Basic-Syntax | Markdown](https://www.markdownguide.org/basic-syntax/)  
-`you can find all base-syntax in:
-[Basic-Syntax | Markdown](https://www.markdownguide.org/basic-syntax/) `
-
-### Picture link
-use a `!`to show picture if you want.  
-`![pic name](pic link)`  
-This is my github Logo:  
-![my logo](https://avatars.githubusercontent.com/u/96762801?v=4)  
-`![my logo](https://avatars.githubusercontent.com/u/96762801?v=4)`
-### Linking picture
-if you click under logo it will go to pic link.  
-[![my logo](https://avatars.githubusercontent.com/u/96762801?v=4)](https://avatars.githubusercontent.com/u/96762801?v=4)
-```
-[![my logo](https://avatars.githubusercontent.com/u/96762801?v=4)](https://avatars.githubusercontent.com/u/96762801?v=4)
-```
-## markdown page jump
-use `<span id="markdown"></span>` at where you want to jump, then replace web link `[here](#markdown)`.  
-now you can click here to jump to where `<span id="markdown"></span>` is.
