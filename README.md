@@ -10,17 +10,18 @@
 - can use `type()` to see the type of an object
 
 ```
-  ```>>> type(3.1)
-  <class 'float'>
-  >>> type(5)
-  <class 'int'>
-  >>> type(None)
-  <class 'NoneType'>
-  >>> type(True)
-  <class 'bool'>
-  >>> type('a')
-  <class 'str'>
-  >>>```
+>>> type(3.1)
+<class 'float'>
+>>> type(5)
+<class 'int'>
+>>> type(None)
+<class 'NoneType'>
+>>> type(True)
+<class 'bool'>
+>>> type('a')
+<class 'str'>
+>>>
+```
 
 - change object type
 

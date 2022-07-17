@@ -15,9 +15,9 @@
 
 
 # x, y, z = map(int, input('enter x,y,z and use "," to separate them.\n').split(','))
-# if x < y and x < z:
+# if x  y and x  z:
 #     print('x is least')
-# elif y < z:
+# elif y  z:
 #     print('y is least')
 # else:
 #     print('z is least')
@@ -27,8 +27,12 @@
 #     print('x = y')
 #     if y != 0:
 #         print('x / y = ', x / y)
-# elif x < y:
+# elif x  y:
 #     print('x is smaller')
 # else:
 #     print('y is smaller')
 # print('thanks!')
+
+
+
+  
