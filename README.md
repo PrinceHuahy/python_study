@@ -10,6 +10,37 @@ b = 'abc'
 print(a == b)
 ```
 
+## Comments
+
+- Write # after code at same line with double space or start with a new line to create a comments.
+- In Pycharm, you can easily use `ctrl + /` to comments or uncomment.
+
+```python
+a = 5
+# use # before string will get a comments
+print(a)  # print 5 at screen.
+```
+
+- Multi Line Comments
+
+```python
+x = 1
+# comments line 1
+# comments line 2
+# comments line 3
+print(x)
+```
+
+- You can use multiline string instead multi line comments because Python will ignore strings that are not assigned to a
+  variable.
+
+```python
+"""
+You can write comments
+between double triple-quotes.
+"""
+```
+
 ## Python Variables
 
 > variable = value
@@ -95,32 +126,59 @@ a = b = c = 5
 print(a, b, c)
 ```
 
-## Comments
+### Output Variables
 
-- Write # after code at same line with double space or start with a new line to create a comments.
-
-```python
-a = 5
-# use # before string will get a comments
-print(a)  # print 5 at screen.
-```
-
-- Multi Line Comments
+- Use `print()` function to output variables.
 
 ```python
 x = 1
-# comments line 1
-# comments line 2
-# comments line 3
 print(x)
+print(5)
+print('this is a string.')
 ```
 
-- You can use multiline string instead multi line comments because Python will ignore strings that are not assigned to a
-  variable.
+- You can add string and variable in print.
 
 ```python
-"""
-You can write comments
-between double triple-quotes.
-"""
+x = 'Tom'
+y = 10
+print('My name is ' + x + ', and I am ' + str(y) + ' years old.')
+print('My name is', x, ', and I am', y, 'years old.')
+print(2 + 3)
+print(3 + 2 / 5 * 7)
 ```
+
+- `print` can only add same type value with `+`, so use `str(y)` to change y to string.
+- You can also use `,` to "add" string in python. but with `,` it will auto add a space between two strings.
+- When you use `,` in python, it's not `add` two same value. Instead, it just shows two different value with a space to separate them.
+- You can do the calculation in print function.
+- Just try to run `print(3 * 'hello')`, see what it looks like?
+
+### Global Variables
+In python, we specify that `function` can only read variable's value which not declared in `function`.
+```python
+x = 5
+def my_func():
+    print('2 + 3 = ',x)
+my_func()
+
+# def wrong_use():
+#     x = x + 1
+#     print(x)
+# wrong_use()
+```
+- when you run second function, it will return a error like this
+>UnboundLocalError: local variable 'x' referenced before assignment
+- To avoid this error, we can use `global` to declared them.
+```python
+x = 5
+
+def my_func():
+    global x
+    x = x + 1
+    print(x)
+my_func()
+```
+
+
+
