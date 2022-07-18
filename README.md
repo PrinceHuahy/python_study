@@ -47,7 +47,7 @@ z = '3.14'
 print(float(z))
 ```
 
-- <span style="color:red">Attention:</span> you can not casting 'a' to int type.But you can change '3.14' to 3.14.
+- <p><span style="color:red">Attention:</span> you can not casting 'a' to int type.But you can change '3.14' to 3.14.</p>
 
 ### Variable name
 
