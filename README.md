@@ -1,174 +1,126 @@
-# Python
+This is a study note. Based on [W3schools](https://www.w3schools.com/python)
 
-## Scalar Objects
+# Python Syntax
 
-- int : 5
-- float : 3.27
-- bool : True False
-- NoneType : None
-- String : 'a'
-- can use `type()` to see the type of an object
-
-```
->>> type(3.1)
-<class 'float'>
->>> type(5)
-<class 'int'>
->>> type(None)
-<class 'NoneType'>
->>> type(True)
-<class 'bool'>
->>> type('a')
-<class 'str'>
->>>
-```
-
-- change object type
-
-```
->>> float(5)
-5.0
->>> int(3.9)
-3
->>>
-```
-
-## Printing to console
-
-use `print` function to print object to screen.
-
-## Operators on ints and floats
-
-```
->>> 3+2
-5
->>> 3-2
-1
->>> 3*2
-6
->>> 4/2
-2.0
->>> 6//5
-1
->>> 6%4
-2
->>> 3**2
-9
->>>
-```
-
-### operator precedence without parentheses
-
-`**` >`*` > `/` > `+` or `-`
-
-## Binding Variables and Values
-
-`variable` = `value`
-
-```
->>> pi = 3.1415
->>> pi
-3.1415
->>>
-```
-
-```
-pi = 3.14
-radius = 2.2
-area = pi * (radius ** 2)
-```
-
-## Comparison Operators on int and float
-
-- i and j are any variable names
-- use `==` equal, `!=` not equal
-
-```
->>> i = 3
->>> j = 5
->>> i > j
-False
->>> i >= j
-False
->>> i < j
-True
->>> i <= j
-True
->>> i == j
-False
->>> i != j
-True
->>>
-```
-
-## Logic operators on bools
-
-- a and b are any variable names
-
-  `a`  and `b`  == True if `a` is True and `b` is True
-
-  `a` or `b` == True if `a` is True or `b` is True
-
-  not `a` == True if `a` is False
-
-## Branching Programs
+- In python, double quotes or single quotes both are ok.
 
 ```python
-x = int(input('Enter an integer:'))
-if x % 2 == 0:
-    print('')
-    print('Even')
-else:
-    print('')
-    print('Odd')
-print('Done with conditional')
+a = "abc"
+b = 'abc'
+print(a == b)
 ```
+
+## Python Variables
+
+> variable = value
 
 ```python
-x, y, z = map(int, input('enter x,y,z and split with ",":\n').split(','))
-if x < y and x < z:
-    print('x is least')
-elif y < z:
-    print('y is least')
-else:
-    print('z is least')
-```
+a1 = 3
+a2 = 3.14
+a3 = 'pi'
+a4 = True
+a5 = None
+ ```
+
+### Variable type
+
+- Use `type(variable)` in python can easily get variable type. Python is a case-sensitive language.
 
 ```python
-x, y = map(float, input('input x and y use space to separate them.\n').split(' '))
-if x == y:
-    print('x = y')
-    if y != 0:
-        print('x / y = ', x / y)
-elif x < y:
-    print('x is smaller')
-else:
-    print('y is smaller')
-print('thanks!')
+x = 3.14
+print(type(x))
+y = 'pi'
+print(type(y))
 ```
 
-## Strings,Branching,Iteration
+### Casting type
 
-### Variables
+- If you want to change the variable type, you need casting them.
 
-- <span style="color:red">name</span>
-    - descriptive
-    - meaningful
-    - helps re-read code
-    - cannot be <strong>keywords</strong>
-- <span style='color:red'>value</span>
-    - store information
-    - can be update
+```python
+x = 3.14
+print(type(x))
+y = int(3.14)
+print(type(y))
+print(type(str(3.14)))
+z = '3.14'
+print(float(z))
+```
 
-### exchange the variables value
+- <span style="color:red">Attention:</span> you can not casting 'a' to int type.But you can change '3.14' to 3.14.
+
+### Variable name
+
+- Variable name must start with a letter or underscore character.
+- Variable name can only use `A-z,0-9 and _`
+- `abCd` and `abcd` are two variable.
+- Personally <span style="color:red">not recommend</span> use key-word to name a variable.
+
+```python
+# These variable name is ok
+a = 5
+_aA = 6.5
+Twfsa_vczxv = True
+myFuncValue = 'test'
+my_func_value2 = '4'
+# These variable name is unusable.
+# 4a = 'hello python'
+# sse$c = 2
+# ffc-fasd = 65
+# These are key-word variable.
+list = [1, 2, 3]
+str = 'hello'
+int = 5
+float = 3.14
+dict = {a: 1}
+```
+
+### Assign Multiple Values
+
+- If you want to create multiple values at one time. Just use ',' to separate them.
+
+> variable1, variable2, variable3 = value1, value2, value3
+
+```python
+a, b, c = 1, 'beta', True
+print(a, b, c)
+```
+
+- Create multiple variable with same value.
+
+> variable1 = variable2 = variable3 = value
+
+```python
+a = b = c = 5
+print(a, b, c)
+```
+
+## Comments
+
+- Write # after code at same line with double space or start with a new line to create a comments.
+
+```python
+a = 5
+# use # before string will get a comments
+print(a)  # print 5 at screen.
+```
+
+- Multi Line Comments
 
 ```python
 x = 1
-y = 2
-x, y = y, x
+# comments line 1
+# comments line 2
+# comments line 3
+print(x)
 ```
 
-## Types
+- You can use multiline string instead multi line comments because Python will ignore strings that are not assigned to a
+  variable.
 
-- String
-
+```python
+"""
+You can write comments
+between double triple-quotes.
+"""
+```
