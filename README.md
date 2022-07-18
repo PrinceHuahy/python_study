@@ -47,14 +47,14 @@ z = '3.14'
 print(float(z))
 ```
 
-- <span style="color:red">Attention:</span> you can not casting 'a' to int type.But you can change '3.14' to 3.14.
+- Attention: you can not cast 'a' to int type.But you can change '3.14' to 3.14.
 
 ### Variable name
 
 - Variable name must start with a letter or underscore character.
 - Variable name can only use `A-z,0-9 and _`
 - `abCd` and `abcd` are two variable.
-- Personally <span style="color:red">not recommend</span> use key-word to name a variable.
+- Personally `not recommend` use key-word to name a variable.
 
 ```python
 # These variable name is ok
