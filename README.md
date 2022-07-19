@@ -99,11 +99,11 @@ my_func_value2 = '4'
 # sse$c = 2
 # ffc-fasd = 65
 # These are key-word variable.
-list = [1, 2, 3]
-str = 'hello'
-int = 5
-float = 3.14
-dict = {a: 1}
+# list = [1, 2, 3]
+# str = 'hello'
+# int = 5
+# float = 3.14
+# dict = {a: 1}
 ```
 
 ### Assign Multiple Values
@@ -347,3 +347,4 @@ a = 'Hello, This is a mistake, Thank you.'
 print(a.split(','))
 ```
 ### Format Strings
+-
