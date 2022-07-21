@@ -45,7 +45,6 @@ def get_detail_url(url):
 <td height="26">
 	<b>
 		
-		<a href="/html/gndy/dyzz/20220614/62703.html" class="ulink">2021年悬疑《99.9：刑事专业律师电影版》BD日语中字</a>
 	</b>
 </td>
 </tr>
