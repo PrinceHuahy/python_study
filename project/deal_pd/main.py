@@ -18,13 +18,13 @@ def main(filename):
     df.dropna(subset=['BS'], axis=0, how='any', inplace=True)  # drop BS column Nan row.
     df['tradeSign'] = df['BS'].astype(str).apply(create_tradesign).astype(float)  # create tradeSign
 
-    l1 = find_corr(df, 'lag=1')
-    l2 = find_corr(df, 'lag=2')
-    l3 = find_corr(df, 'lag=3')
+    lag1 = find_corr(df, 'lag=1')
+    lag2 = find_corr(df, 'lag=2')
+    lag3 = find_corr(df, 'lag=3')
     y0 = 0
-    y1 = log(find_corr(df, 'lag=1'))
-    y2 = log(find_corr(df, 'lag=2'))
-    y3 = log(find_corr(df, 'lag=3'))
+    y1 = log(lag1)
+    y2 = log(lag2)
+    y3 = log(lag3)
     x = [1, 2, 3, 4]
     y = [y0, y1, y2, y3]
 
@@ -32,9 +32,9 @@ def main(filename):
     print(f'正在写入{filename}的结果')
     with open('ans.txt', 'a+') as f:
         f.write(f'{filename}\n')
-        f.write(f'lag=1 corr = {l1}\n')
-        f.write(f'lag=2 corr = {l2}\n')
-        f.write(f'lag=3 corr = {l3}\n')
+        f.write(f'lag=1 corr = {lag1}\n')
+        f.write(f'lag=2 corr = {lag2}\n')
+        f.write(f'lag=3 corr = {lag3}\n')
         f.write(f'rho = {math.e ** w}\n')
         f.write('=' * 50 + '\n')
 
