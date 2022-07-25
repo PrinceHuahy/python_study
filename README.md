@@ -92,7 +92,7 @@ print(float(z))
 a = 5
 _aA = 6.5
 Twfsa_vczxv = True
-myFuncValue = 'test'
+myFuncValue = 'conbine_data'
 my_func_value2 = '4'
 # These variable name is unusable.
 # 4a = 'hello python'

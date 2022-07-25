@@ -47,7 +47,7 @@ def create_tradesign(x):
 
 
 # print(df.info())
-# df.to_csv('test.csv')
+# df.to_csv('conbine_data.csv')
 
 # lag=0   == 1
 

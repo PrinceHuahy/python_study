@@ -174,7 +174,7 @@ for i in range(0, x.shape[1], 1):
     test2['profit_year'] = win_rate2['profit_year']
     test2['max_ratracement'] = win_rate2['max_retracement']
 
-test.to_excel('test.py.xlsx')
+test.to_excel('conbine_data.py.xlsx')
 win_rate.to_excel('win_rate.xlsx')
 
 test2.to_excel('test2.xlsx')

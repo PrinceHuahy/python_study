@@ -44,7 +44,7 @@ def change():
     for i in result:
         # print(i)
         test.append(i.split(','))
-    # print(test.py)
+    # print(conbine_data.py)
     for i in test:
         i_new = []
         for j in i:
@@ -82,4 +82,4 @@ def save_data(datalist, savepath):
     book.save(savepath)
 
 show_ori()
-# save_data(change(), './test.py.xls')
+# save_data(change(), './conbine_data.py.xls')
